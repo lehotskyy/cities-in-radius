@@ -11,7 +11,7 @@ class GetCitiesInRadius extends Controller
     {
         $radius = 50;
         $citiesInRadius = [];
-
+        // todo: if there was a bit more time, it could be made as separate xhr action with corresponding request validation
         if (isset($request->city, $request->radius)) {
             $radius = $request->radius;
             $city = City::findOrFail($request->city);
